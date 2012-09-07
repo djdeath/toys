@@ -84,12 +84,12 @@ create_cloud(ClutterActor *cloud_texture)
   animator = clutter_animator_new();
   opacity = (guint8)(get_variance (OPACITY, OPACITY_VARIANCE) * 255.0);
   clutter_animator_set (animator,
-                        cloud, "x", CLUTTER_LINEAR, 0.0, stage_width,
+                        cloud, "translation-x", CLUTTER_LINEAR, 0.0, stage_width,
                         cloud, "opacity", CLUTTER_LINEAR, 0.0, 0,
                         cloud, "opacity", CLUTTER_EASE_IN_CUBIC, 0.15, opacity,
                         cloud, "opacity", CLUTTER_LINEAR, 0.85, opacity,
                         cloud, "opacity", CLUTTER_EASE_OUT_CUBIC, 1.0, 0,
-                        cloud, "x", CLUTTER_LINEAR, 1.0, -cloud_width,
+                        cloud, "translation-x", CLUTTER_LINEAR, 1.0, -cloud_width,
                         NULL);
 
   clutter_animator_set_duration (animator,
